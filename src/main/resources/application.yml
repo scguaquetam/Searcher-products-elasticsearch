@@ -1,7 +1,7 @@
 ## Configuracion de Spring
 spring:
   application:
-    name: facets-search-engine
+    name: ms-movies-series-elasticsearch
 
 ## Configuracion de Instancia 
 server:
@@ -16,3 +16,12 @@ elasticsearch:
 logging:
   level:
     tracer: TRACE
+
+## Configuracion del cliente de Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+    hostname: ms-movies-series-elasticsearch
